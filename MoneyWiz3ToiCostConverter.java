@@ -28,7 +28,7 @@ public class MoneyWiz3ToiCostConverter {
     };
 
     public static void main(String[] args) {
-        List<RowData> inputList = GetExcelData();
+        List<RowData> inputList = getExcelData();
         int total = inputList.size();
         int loopSize = total / 5000;
         // 输出全部数据
@@ -115,7 +115,7 @@ public class MoneyWiz3ToiCostConverter {
 
     }
 
-    public static List<RowData> GetExcelData() {
+    public static List<RowData> getExcelData() {
         List<RowData> resultList = new ArrayList<>();
         try (CSVReader reader = new CSVReader(
                 new InputStreamReader(Files.newInputStream(Paths.get(originDataPath)), StandardCharsets.UTF_16))) {
